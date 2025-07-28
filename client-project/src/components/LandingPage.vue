@@ -34,7 +34,7 @@ export default {
           </div>
           <div class="core_value_sub mt-6">
             <h4>
-              Find Joy from immersing on new worlds over flowers around you.
+              Find Joy from immersing on new worlds with flowers around you.
             </h4>
           </div>
         </div>
@@ -516,7 +516,19 @@ h3.quote_happiness {
   width: 10rem;
   font-size: calc(17px + 0.1vw);
   z-index: 3;
-  backdrop-filter: contrast(14%);
+  backdrop-filter: contrast(10%);
+}
+
+.call_to_action a.btn_read {
+  color: var(--accent-color-1);
+  border: 1px solid var(--accent-color-1);
+  opacity: 0.65;
+}
+
+.call_to_action a.btn_read:hover {
+  color: var(--background-main-content-1);
+  opacity: 1;
+  border: 1px solid var(--background-main-content-1);
 }
 
 .subtitle_lead,
@@ -571,6 +583,7 @@ h3.quote_happiness {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: overlay;
 }
 
 .promise_intend {
@@ -580,7 +593,11 @@ h3.quote_happiness {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  color: var(--accent-color-1);
+  color: var(--background-main-content-1);
+}
+
+.promise_intend .core_value_sub {
+  opacity: 0.78;
 }
 
 /* about me */
