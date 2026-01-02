@@ -1,8 +1,8 @@
 <script>
 import { ref, onMounted } from "vue";
-import LandingPage from "./components/LandingPage.vue";
+import LandingPageOne from "./components/LandingPageOne.vue";
 export default {
-  components: { LandingPage },
+  components: { LandingPageOne },
   setup() {
     const navlinks = ref([
       { id: "navlink-1", label: "HOME", ref: null },
@@ -61,11 +61,11 @@ export default {
     </nav>
   </header>
   <main class="w-full">
-    <LandingPage />
+    <LandingPageOne />
   </main>
 
   <footer>
-    <div class="footer_container w-full mt-28">
+    <div class="footer_container w-full">
       <div
         class="footer_resume w-full h-[460px] pt-40 px-10 flex flex-row items-center justify-between"
       >
@@ -177,8 +177,13 @@ ul {
 nav {
   position: fixed;
   top: 0;
-  background-color: var(--accent-color-1);
-  box-shadow: 0px 0px 3px var(--link-color);
+  /*  background-color: var(--accent-color-1); */
+
+  background-color: var(--background-aux);
+
+  /* box-shadow: 0px 0px 3px var(--link-color); */
+
+  box-shadow: 0px 0px 3px var(--paragraph-color);
   z-index: 25;
 }
 
@@ -186,12 +191,14 @@ nav {
   font-family: "Noto Serif", serif;
   font-size: var(--size-regular);
   font-weight: 600;
-  color: var(--paragraph-color-2);
+  /*  color: var(--paragraph-color-2); */
+
+  color: var(--paragraph-color);
 }
 
 .navlink {
-  font-size: var(--size-cater);
-  color: var(--paragraph-color-2);
+  /* color: var(--paragraph-color-2); */
+  color: var(--paragraph-color);
   font-weight: inherit;
   text-decoration: none;
   transition: all 450ms ease-in-out;
@@ -202,7 +209,8 @@ nav {
 }
 
 .navlink.active_navlink {
-  color: var(--paragraph-color-2);
+  /* color: var(--paragraph-color-2); */
+  color: var(--paragraph-color);
   font-weight: 600;
   text-decoration: underline;
 }
@@ -216,8 +224,12 @@ footer a {
 }
 
 .footer_container {
-  color: var(--paragraph-footer);
-  background-color: var(--background-footer);
+  /* color: var(--paragraph-footer);
+  background-color: var(--background-footer); */
+
+  color: var(--paragraph-color);
+  background-color: var(--background-aux);
+  font-weight: 500;
 }
 
 /* .logo {
