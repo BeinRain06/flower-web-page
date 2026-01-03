@@ -10,8 +10,10 @@ export default {
   <div id="landing_page" class="landing_page p-0">
     <!-- hero section -->
     <section class="hero_section w-full">
-      <div class="hero_content relative pt-10 w-full h-full px-[2.25rem]">
-        <div class="hero_image absolute top-10 left-0"></div>
+      <div
+        class="hero_content relative pt-[0.225rem] px-0 md:pt-12 w-full h-full md:px-[2.25rem]"
+      >
+        <div class="hero_image absolute top-0 md:top-10 left-0"></div>
         <div
           class="hero_context w_ct_max_1 h-full mx-auto flex flex-col items-center justify-center"
         >
@@ -25,14 +27,14 @@ export default {
             <div
               class="sub_core_value text-[var(--paragraph-color)] pb-[2.25rem] mx-auto"
             >
-              <p class="w-max px-[0.225rem]">
+              <p class="px-[0.225rem]">
                 Reconquer your happiness and energize your soul standing over
                 beautiful scenery's flowers
               </p>
             </div>
           </div>
           <div
-            class="hero_btn pt-[2.925rem] pb-[0.9rem] w-full flex flex-row justify-center gap-[1.8rem]"
+            class="hero_btn md:pt-[0.8%] pt-[2%] pb-[1.35rem] md:pb-[1.125rem] w-full flex flex-row justify-center gap-[1.8rem]"
           >
             <a href="#" class="btn_order">Place An Order</a>
             <a class="btn_in_shelves">In Shelves</a>
@@ -42,9 +44,9 @@ export default {
     </section>
 
     <!-- about me section -->
-    <section class="about_section w-full relative mt-[4.5rem]">
+    <section class="about_section w-full relative mt-0 md:mt-[4.5rem]">
       <div
-        class="about_content flex flex-row-reverse justify-center h-[20.7rem] mx-auto py-[0.45rem]"
+        class="about_content w_ct_max_2 flex flex-col md:flex-row-reverse justify-center h-auto md:h-[20.7rem] mx-auto py-[0.45rem]"
       >
         <figure class="about_image">
           <img
@@ -68,13 +70,15 @@ export default {
             >
           </figcaption>
         </figure>
-        <div class="about_context w-[56.2%] flex flex-col">
-          <h3 class="title_context font-semibold pt-[0.45rem] pb-[1.575rem]">
+        <div class="about_context w-full md:w-[56.2%] flex flex-col">
+          <h3
+            class="title_context text-center md:text-left font-semibold pt-[0.45rem] pb-[1.35rem]"
+          >
             About Me
           </h3>
           <div class="about_deal">
             <p
-              class="about_dealing_text font-light break-words w-[90%] mb-[1.8rem]"
+              class="about_dealing_text text-justify md:text-left font-light break-words w-[90%] mx-auto md:mx-0 mb-[1.8rem]"
             >
               My Name is Terry Jehnkins. Over 14years+ i confered my flowers]
               passion a commitment to turn back love, peace, and fulfillment to
@@ -83,7 +87,9 @@ export default {
               engage to walk you in a life you be happier to set.
             </p>
           </div>
-          <div class="about_btn">
+          <div
+            class="about_btn w-full flex flex-row justify-end md:justify-start"
+          >
             <a class="btn_visit_shop">Visit Our Shop </a>
           </div>
         </div>
@@ -243,7 +249,7 @@ export default {
           Services
         </h3>
         <div
-          class="services_deal w-[75%] pb-[2.025rem] flex flex-col gap-[2.025rem] mx-auto"
+          class="services_deal w-[96%] md:w-[75%] pb-[2.025rem] flex flex-col gap-[2.025rem] mx-auto"
         >
           <article
             class="service_item w-full h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex flex-row justify-between border border-solid border-[var(--background-aux)] rounded-sm"
@@ -381,7 +387,7 @@ export default {
 
     <!-- special offer section -->
     <section class="offer_section w-full">
-      <div class="section_content relative w-full h-[23.4rem]">
+      <div class="offer_content relative w-full h-[21.6rem] md:h-[23.4rem]">
         <div class="special_image"></div>
         <div
           class="special_deal absolute top-0 w-full h-full pt-[2.925rem] flex flex-col items-center"
@@ -414,10 +420,10 @@ export default {
         >
           Why Us ?
         </h3>
-        <div class="trust_deal pb-[3.375rem]">
+        <div class="trust_deal w-full pb-[3.375rem]">
           <div
             id="benefit_item1"
-            class="px-[1.125rem] w-full flex flex-row items-center justify-start gap-[1.35rem] border-r-4 border-solid border-[var(--background-main)] rounded-sm"
+            class="md:pr-[1.125rem] w-full flex flex-row items-center justify-end gap-[1.35rem] md:border-r-4 md:border-solid md:border-[var(--background-main)] rounded-sm"
           >
             <div class="icon_wrap">
               <svg
@@ -432,9 +438,9 @@ export default {
                 />
               </svg>
             </div>
-            <div class="benefit_context w-[80%] flex flex-col gap-[1.125rem]">
+            <div class="benefit_context w-[75%] flex flex-col gap-[1.125rem]">
               <h4 class="benefit_title">Priority</h4>
-              <p class="benefit_text">
+              <p class="benefit_text w-11/12">
                 We are not just delivering, we aims to tease your happiness
                 after understanding the essence of your demands.
               </p>
@@ -442,7 +448,7 @@ export default {
           </div>
           <div
             id="benefit_item2"
-            class="px-[1.125rem] w-full flex flex-row justify-start gap-[1.35rem]"
+            class="md:pl-[1.125rem] w-full flex flex-row justify-end md:justify-start gap-[1.35rem]"
           >
             <div class="icon_wrap">
               <svg
@@ -457,9 +463,9 @@ export default {
                 />
               </svg>
             </div>
-            <div class="benefit_context w-[80%] flex flex-col gap-[1.125rem]">
+            <div class="benefit_context w-[75%] flex flex-col gap-[1.125rem]">
               <h4 class="benefit_title">Support</h4>
-              <p class="benefit_text">
+              <p class="benefit_text w-11/12">
                 Advice you on the process of growing or taking care of natural
                 flowers for your garden or home.
               </p>
@@ -467,7 +473,7 @@ export default {
           </div>
           <div
             id="benefit_item3"
-            class="px-[1.125rem] w-full flex flex-row justify-start gap-[1.35rem]"
+            class="md:pl-[1.125rem] w-full flex flex-row justify-end md:justify-start gap-[1.35rem]"
           >
             <div class="icon_wrap">
               <svg
@@ -486,9 +492,9 @@ export default {
                 />
               </svg>
             </div>
-            <div class="benefit_context w-[80%] flex flex-col gap-[1.125rem]">
+            <div class="benefit_context w-[75%] flex flex-col gap-[1.125rem]">
               <h4 class="benefit_title">Flexibility</h4>
-              <p class="benefit_text">
+              <p class="benefit_text w-11/12">
                 We desirably work with you to organize, arrange, and spark
                 beautiful sceneries of flowers.
               </p>
@@ -503,14 +509,14 @@ export default {
 
     <!-- testimonials section -->
     <section class="testimonials_section w-full">
-      <div class="testimonials_content pt-[4.275rem]">
+      <div class="testimonials_content pt-[4.05rem] md:pt-[4.275rem]">
         <h3
           class="title_context w-full text-center font-semibold pt-[0.45rem] pb-[2.7rem]"
         >
           Testimonials
         </h3>
         <div
-          class="testimonials_deal flex flex-col items-center gap-[2.7rem] rounded"
+          class="testimonials_deal w_ct_max_3 mx-auto flex flex-col items-center gap-[2.7rem] rounded"
         >
           <article
             class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex flex-row justify-center items-center gap-[1.8rem]"
@@ -587,7 +593,7 @@ export default {
       class="reinforcement_section w-full bg-[var(--background-aux)] text-opacity-80 relative mt-[7.425rem]"
     >
       <div
-        class="about_content flex flex-row justify-between gap-[1.8rem] mx-auto pt-[4.05rem] pb-[2.925rem]"
+        class="about_content w_ct_max_2 flex flex-col md:flex-row justify-between gap-[1.575rem] md:gap-[2.475rem] mx-auto pt-[4.05rem] pb-[2.925rem]"
       >
         <figure class="about_image">
           <img
@@ -611,19 +617,23 @@ export default {
             >
           </figcaption>
         </figure>
-        <div class="about_context w-[56.2%] flex flex-col">
-          <h3 class="title_context font-semibold pt-[0.45rem] pb-[1.575rem]">
+        <div class="about_context w-full md:w-[56.2%] flex flex-col">
+          <h3
+            class="title_context text-center md:text-left font-semibold pt-[0.45rem] pb-[1.35rem] md:pb-[1.575rem]"
+          >
             Close Happiness
           </h3>
           <div class="about_deal">
             <p
-              class="about_dealing_text font-light break-words w-[90%] mb-[1.8rem]"
+              class="about_dealing_text text-justify md:text-left font-light break-words w-[90%] mx-auto md:mx-0 mb-[1.8rem]"
             >
               Capture Moments That Crystallize Your Entire Events. Share the
               beauty Quietly and peacefully.
             </p>
           </div>
-          <div class="about_btn">
+          <div
+            class="about_btn w-full flex flex-row justify-end md:justify-start"
+          >
             <a class="btn_visit_shop">Visit Our Shop </a>
           </div>
         </div>
@@ -632,7 +642,7 @@ export default {
 
     <!-- farewell section -->
     <section class="farewell_section w-full">
-      <div class="farewell_content relative w-full h-[31.5rem]">
+      <div class="farewell_content relative w-full h-[23.4rem] md:h-[31.5rem]">
         <div class="farewell_drop_shadow"></div>
         <div class="farewell_deal w-full h-full">
           <div class="farewell_image"></div>
@@ -657,22 +667,29 @@ export default {
   scroll-margin-top: 12px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 520px) {
   /* utilities */
   .w_ct_max_1 {
-    width: 61.2rem;
+    width: 90%;
   }
+
+  .w_ct_max_2 {
+    width: 96%;
+  }
+
+  .w_ct_max_3 {
+    width: max(71.6%, 32.625rem);
+  }
+
+  /*  h1 {
+  line-height: 1.42;
+} */
 
   /* hero section */
   .hero_section {
     position: relative;
     width: 100%;
-    height: 80vh;
-    /*  background: linear-gradient(
-      97.39deg,
-      hsl(35, 18%, 90%) 25.12%,
-      hsl(35, 18%, 75%) 82.16%
-    ); */
+    height: 100vh;
   }
 
   .hero_content {
@@ -680,10 +697,8 @@ export default {
   }
 
   .hero_image {
-    width: max(100%, 16.2rem);
-    height: 90%;
-    border-top: 2px solid var(--background-aux);
-    border: 2px solid transparent;
+    width: 100%;
+    height: 100%;
     background: url("../assets/images/Couleur_Pixabay.jpg") left center
       no-repeat;
     background-size: 100%;
@@ -711,26 +726,21 @@ export default {
   }
 
   /* about section */
-  .about_content {
-    width: min(92%, 61.2rem);
-  }
-
   .about_image {
-    width: 42.6%;
+    width: 100%;
     padding: 0.45rem;
   }
 
   .about_pic {
     width: 100%;
-    aspect-ratio: 16/10;
+    height: 34.2rem;
     object-fit: cover;
   }
 
   /* recommended flowers section */
   .recommended_deal {
-    width: max(60%, 40.05rem);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 80%;
     grid-template-rows: max-content;
     gap: 1.35rem;
   }
@@ -738,21 +748,18 @@ export default {
   /* shelves section */
   .shelves_deal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15.75rem, 1fr));
-    grid-template-rows: max-content;
-    place-items: center;
+    grid-auto-columns: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(11.72rem, 1fr));
+    grid-auto-rows: max-content;
     gap: 1.35rem;
   }
 
   .shelves_item {
     width: 100%;
     height: 100%;
-    padding: 1.125rem;
+    padding: 0;
     border-radius: 0.225rem;
     text-align: center;
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 1;
   }
 
   .shelves_image {
@@ -761,7 +768,7 @@ export default {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 94% auto;
-    gap: 1.125rem;
+    gap: 0.45rem;
   }
 
   .shelves_pic {
@@ -773,7 +780,6 @@ export default {
   .special_image {
     width: 100%;
     height: 100%;
-    /*  border-top: 2px solid var(--background-aux); */
     border: 2px solid transparent;
     background: url("../assets/images/chaos-answer_pixabay.jpg") left center
       no-repeat;
@@ -785,50 +791,44 @@ export default {
   }
 
   /* trust section */
-
   .trust_deal {
-    width: max(70%, 40.05rem);
-    margin: 0 auto;
     display: grid;
     grid-template-areas:
-      "benefit-1 benefit-1 benefit-2 benefit-2"
-      "benefit-1 benefit-1 benefit-3 benefit-3";
-    gap: 1.35rem;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto auto;
+      "benefit-1"
+      "benefit-2"
+      " benefit-3";
+    gap: 2.025rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    place-content: center center;
   }
 
   #benefit_item1 {
     width: 100%;
     grid-area: benefit-1;
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
   }
 
   #benefit_item2 {
     width: 100%;
     grid-area: benefit-2;
-    grid-column: 3 / span 2;
-    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
 
   #benefit_item3 {
     width: 100%;
     grid-area: benefit-3;
-    grid-column: 3 / span 2;
-    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
   }
 
   /* testimonials section */
-  .testimonials_deal {
-    width: max(70%, 40.05rem);
-    margin: 0 auto;
-  }
-
   .testimonial_image {
     flex-shrink: 0;
-    width: 5.85rem;
-    height: 5.85rem;
+    width: 4.05rem;
+    height: 4.05rem;
     display: grid;
     place-items: center;
     background-color: var(--background-aux);
@@ -843,8 +843,6 @@ export default {
       0% 20%
     );
   }
-
-  /* reinforcement section */
 
   /* farewell section */
   .farewell_drop_shadow {
@@ -865,5 +863,116 @@ export default {
     outline: none;
     /* z-index: -1; */
   }
+}
+
+@media screen and (min-width: 860px) {
+  /* utilities */
+  .w_ct_max_1 {
+    width: min(84%, 61.2rem);
+  }
+
+  .w_ct_max_2 {
+    width: min(92%, 61.2rem);
+  }
+
+  .w_ct_max_3 {
+    width: max(71.6%, 40.05rem);
+  }
+
+  /* hero section */
+  .hero_section {
+    width: 100%;
+    height: 88vh;
+    /*  background: linear-gradient(
+      97.39deg,
+      hsl(35, 18%, 90%) 25.12%,
+      hsl(35, 18%, 75%) 82.16%
+    ); */
+  }
+
+  .hero_image {
+    width: 100%;
+    height: 90%;
+    border-top: 2px solid var(--background-aux);
+    border: 2px solid transparent;
+  }
+
+  /* about section */
+  .about_image {
+    width: 42.6%;
+    padding: 0.45rem;
+  }
+
+  .about_pic {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+  }
+
+  /* recommended flowers section */
+  .recommended_deal {
+    display: grid;
+    grid-auto-columns: unset;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    gap: 1.35rem;
+  }
+
+  /* shelves section */
+  .shelves_deal {
+    display: grid;
+    grid-auto-columns: unset;
+    grid-auto-rows: unset;
+    grid-template-columns: repeat(auto-fit, minmax(15.75rem, 1fr));
+    grid-template-rows: max-content;
+  }
+
+  .shelves_item {
+    width: 100%;
+    height: 100%;
+    padding: 1.125rem;
+    border-radius: 0.225rem;
+    text-align: center;
+  }
+
+  .shelves_image {
+    gap: 1.125rem;
+  }
+
+  /* trust section */
+  .trust_deal {
+    display: grid;
+    grid-template-areas:
+      "benefit-1 benefit-1 benefit-2 benefit-2"
+      "benefit-1 benefit-1 benefit-3 benefit-3";
+    gap: 1.35rem;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-rows: auto auto;
+    place-content: center center;
+  }
+
+  #benefit_item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  #benefit_item2 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  #benefit_item3 {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  /* testimonials section */
+  .testimonial_image {
+    flex-shrink: 0;
+    width: 5.85rem;
+    height: 5.85rem;
+  }
+
+  /* reinforcement section */
 }
 </style>
