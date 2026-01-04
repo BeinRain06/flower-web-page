@@ -44,9 +44,11 @@ export default {
 
 <template>
   <header>
-    <nav class="w-full flex justify-between py-5 px-10">
+    <nav
+      class="w-full flex flex-row justify-between md:justify-between py-5 pl-5 pr-10 md:px-10"
+    >
       <div class="logo_brand">TERRY_FLOWERS</div>
-      <ul class="flex space-x-6">
+      <ul class="flex flex-row space-x-4 md:space-x-6">
         <li
           class="navlink"
           :key="item.id"
@@ -67,10 +69,14 @@ export default {
   <footer>
     <div class="footer_container w-full">
       <div
-        class="footer_resume w-full h-[460px] pt-40 px-10 flex flex-row items-center justify-between"
+        class="footer_resume w-full h-[21.375rem] md:h-[28.575rem] pt-10 md:pt-40 px-10 flex flex-col md:flex-row items-center justify-center md:justify-between gap-[2.025rem] md:gap-0"
       >
-        <div class="footer_logo_brand self-start">TERRY FLOWERS</div>
-        <div class="footer_links w-8/12 self-start flex flex-row justify-start">
+        <div class="footer_logo_brand self-center md:self-start">
+          TERRY FLOWERS
+        </div>
+        <div
+          class="footer_links w-11/12 md:w-8/12 self-center md:self-start flex flex-row justify-start"
+        >
           <div class="footer_space w-1/4 flex flex-col items-start gap-8">
             <h4 class="sub_links_title">Home</h4>
             <div
@@ -187,61 +193,61 @@ nav {
   z-index: 25;
 }
 
-.logo_brand {
-  font-family: "Noto Serif", serif;
-  font-size: var(--size-regular);
-  font-weight: 600;
-  /*  color: var(--paragraph-color-2); */
+@media screen and (min-width: 520px) {
+  /* navbar */
+  .logo_brand {
+    font-family: "Noto Serif", serif;
+    font-size: var(--size-cater);
+    font-weight: 600;
+    color: var(--paragraph-color);
+  }
 
-  color: var(--paragraph-color);
+  .navlink {
+    color: var(--paragraph-color);
+    font-weight: inherit;
+    text-decoration: none;
+    transition: all 450ms ease-in-out;
+  }
+
+  .navlink:hover {
+    cursor: pointer;
+  }
+
+  .navlink.active_navlink {
+    color: var(--paragraph-color);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  /* footer */
+  .footer_logo_brand {
+    font-size: var(--size-h4);
+  }
+
+  footer a {
+    line-height: 1.6;
+    font-size: var(--size-sm);
+    font-family: "Noto Serif", serif;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+
+  .footer_container {
+    color: var(--paragraph-color);
+    background-color: var(--background-aux);
+    font-weight: 500;
+  }
 }
 
-.navlink {
-  /* color: var(--paragraph-color-2); */
-  color: var(--paragraph-color);
-  font-weight: inherit;
-  text-decoration: none;
-  transition: all 450ms ease-in-out;
-}
+@media screen and (min-width: 860px) {
+  /* navbar */
+  .logo_brand {
+    font-size: var(--size-regular);
+  }
 
-.navlink:hover {
-  cursor: pointer;
+  /* footer */
+  .footer_logo_brand {
+    font-size: var(--size-h4);
+  }
 }
-
-.navlink.active_navlink {
-  /* color: var(--paragraph-color-2); */
-  color: var(--paragraph-color);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-footer a {
-  line-height: 32px;
-  font-size: var(--size-sm);
-  font-family: "Noto Serif", serif;
-  font-weight: 300;
-  text-decoration: underline;
-}
-
-.footer_container {
-  /* color: var(--paragraph-footer);
-  background-color: var(--background-footer); */
-
-  color: var(--paragraph-color);
-  background-color: var(--background-aux);
-  font-weight: 500;
-}
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-} */
 </style>
