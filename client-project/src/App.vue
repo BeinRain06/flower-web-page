@@ -14,9 +14,26 @@ export default {
 
     const currentActiveLink = ref(null);
 
+    const checkMenuRef = ref(null);
+
+    const middleBarRef = ref(null);
+
+    const modalMenuRef = ref(null);
+
     const setElementsLinkRef = (el, i) => {
       if (el) {
         navlinks.value[i].ref = el;
+      }
+    };
+
+    const handleMenu = (e) => {
+      console.log("checkMenuRef:", checkMenuRef);
+      if (!checkMenuRef.value.checked) {
+        middleBarRef.value.classList.add("active_menu");
+        modalMenuRef.value.classList.add("active_menu");
+      } else {
+        middleBarRef.value.classList.remove("active_menu");
+        modalMenuRef.value.classList.remove("active_menu");
       }
     };
 
@@ -35,8 +52,12 @@ export default {
 
     return {
       navlinks,
+      checkMenuRef,
+      middleBarRef,
+      modalMenuRef,
       setElementsLinkRef,
       handleNavLinks,
+      handleMenu,
     };
   },
 };
@@ -44,11 +65,11 @@ export default {
 
 <template>
   <header>
-    <nav
-      class="w-full flex flex-row justify-between md:justify-between py-5 pl-5 pr-10 md:px-10"
-    >
+    <nav class="w-full flex flex-row justify-between py-5 pl-5 pr-10 md:px-10">
       <div class="logo_brand">TERRY_FLOWERS</div>
-      <ul class="flex flex-row space-x-4 md:space-x-6">
+      <ul
+        class="navlink_desktop flex flex-row space-x-4 md:space-x-6 hidden min-[520px]:flex"
+      >
         <li
           class="navlink"
           :key="item.id"
@@ -60,6 +81,55 @@ export default {
           {{ item.label }}
         </li>
       </ul>
+      <!-- Menu Mobile -->
+      <div class="menu_wrap block min-[520px]:hidden">
+        <div
+          class="menu_content relative w-8 h-8 flex justify-center items-center rounded border border-solid border-[var(--color-text)]"
+        >
+          <div
+            class="middle_bar relative h-[1px] w-[72%] bg-[var(--paragraph-color)] z-0"
+            ref="middleBarRef"
+          ></div>
+          <div
+            class="input_check_wrap absolute w-4/5 h-4/5 opacity-0 mx-auto z-10"
+            @click="handleMenu"
+          >
+            <input
+              type="checkbox"
+              name="checkbox"
+              class="check_menu w-full h-full rounded cursor-pointer"
+              ref="checkMenuRef"
+            />
+          </div>
+        </div>
+        <div class="modal_menu" ref="modalMenuRef">
+          <div class="modal_close w-full">
+            <div
+              class="icon_menu_close w-full h-6 cursor-pointer flex flex-row justify-end"
+            >
+              x
+            </div>
+          </div>
+          <ul class="modal_menu_links flex flex-col space-y-6">
+            <li
+              class="modal_menu_link"
+              :key="item.id"
+              :id="item.id"
+              v-for="(item, i) in navlinks"
+              :ref="(el) => setElementsLinkRef(el, i)"
+              @click="async (el) => handleNavLinks(el, i)"
+            >
+              <div
+                class="holder_navlink inline-flex items-center justify-end tansition-all duration-300 ease-in-out hover:text-[var(--accent-color-three)]"
+              >
+                <div>
+                  <p class="nav_p_link">{{ item.label }}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <main class="w-full">
@@ -69,48 +139,56 @@ export default {
   <footer>
     <div class="footer_container w-full">
       <div
-        class="footer_resume w-full h-[21.375rem] md:h-[28.575rem] pt-10 md:pt-40 px-10 flex flex-col md:flex-row items-center justify-center md:justify-between gap-[2.025rem] md:gap-0"
+        class="footer_resume w-full max-[520px]:h-auto h-[21.375rem] md:h-[28.575rem] pt-10 md:pt-40 px-10 flex flex-col md:flex-row items-center justify-center md:justify-between gap-[2.025rem] md:gap-0"
       >
         <div class="footer_logo_brand self-center md:self-start">
           TERRY FLOWERS
         </div>
         <div
-          class="footer_links w-11/12 md:w-8/12 self-center md:self-start flex flex-row justify-start"
+          class="footer_links w-11/12 md:w-8/12 self-center md:self-start flex max-[520px]:flex-col max-[520px]:justify-center flex-row justify-start max-[520px]:gap-[2.025rem] gap-0"
         >
-          <div class="footer_space w-1/4 flex flex-col items-start gap-8">
+          <div
+            class="footer_space max-[520px]:w-full w-1/4 flex flex-col max-[520px]:items-center items-start gap-8"
+          >
             <h4 class="sub_links_title">Home</h4>
             <div
-              class="footer_expand_links w-full flex flex-col items-start gap-4"
+              class="footer_expand_links w-full flex flex-col max-[520px]:items-center items-start gap-4"
             >
               <a>about me</a>
               <a>garden</a>
               <a>learn more</a>
             </div>
           </div>
-          <div class="footer_space w-1/4 flex flex-col items-start gap-8">
+          <div
+            class="footer_space max-[520px]:w-full w-1/4 flex flex-col max-[520px]:items-center items-start gap-8"
+          >
             <h4 class="sub_links_title">store</h4>
             <div
-              class="footer_expand_links w-full flex flex-col items-start gap-4"
+              class="footer_expand_links w-full flex flex-col max-[520px]:items-center items-start gap-4"
             >
               <a>recommended</a>
               <a>bunch flowers</a>
               <a>ready to garden</a>
             </div>
           </div>
-          <div class="footer_space w-1/4 flex flex-col items-start gap-8">
+          <div
+            class="footer_space max-[520px]:w-full w-1/4 flex flex-col max-[520px]:items-center items-start gap-8"
+          >
             <h4 class="sub_links_title">New Season</h4>
             <div
-              class="footer_expand_links w-full flex flex-col items-start gap-4"
+              class="footer_expand_links w-full flex flex-col max-[520px]:items-center items-start gap-4"
             >
               <a>feelings</a>
               <a>coming</a>
               <a>discover</a>
             </div>
           </div>
-          <div class="footer_space w-1/4 flex flex-col items-start gap-8">
+          <div
+            class="footer_space max-[520px]:w-full w-1/4 flex flex-col max-[520px]:items-center items-start gap-8"
+          >
             <h4 class="sub_links_title">Contact</h4>
             <div
-              class="footer_expand_links w-full flex flex-col items-start gap-4"
+              class="footer_expand_links w-full flex flex-col max-[520px]:items-center items-start gap-4"
             >
               <a>abdterry@gmail.com</a>
               <a>learn more</a>
@@ -191,6 +269,118 @@ nav {
 
   box-shadow: 0px 0px 3px var(--paragraph-color);
   z-index: 25;
+}
+
+@media screen and (min-width: 140px) {
+  /* footer */
+  .footer_logo_brand {
+    font-size: var(--size-h4);
+  }
+
+  footer a {
+    line-height: 1.6;
+    font-size: var(--size-sm);
+    font-family: "Noto Serif", serif;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+
+  .footer_container {
+    color: var(--paragraph-color);
+    background-color: var(--background-aux);
+    font-weight: 500;
+  }
+
+  /* Menu Mobile */
+  .middle_bar {
+    transition: all 1s ease;
+  }
+
+  .middle_bar::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--paragraph-color);
+    transition: all 1s ease;
+  }
+
+  .middle_bar::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--paragraph-color);
+    transition: all 1s ease;
+  }
+
+  .input_check_wrap {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* activate menu */
+
+  .middle_bar.active_menu {
+    transform: rotate(135deg);
+  }
+
+  .middle_bar.active_menu::before {
+    top: 0;
+    /* transform: rotate(45deg); */
+    transform: rotate(90deg);
+  }
+
+  .middle_bar.active_menu::after {
+    top: 0;
+    /* transform: rotate(135deg); */
+    transform: rotate(90deg);
+  }
+
+  .modal_menu {
+    position: absolute;
+    top: 4.275rem;
+    left: 0;
+    /*  transform: scale(0.45) translateX(-50%); */
+    transform: translateX(-100%);
+    width: max(260px, 90%);
+    height: max-content;
+    padding: 1.125rem 0.9rem;
+    color: var(--paragraph-color);
+    background-color: var(--background-main);
+    visibility: invisible;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 310ms linear;
+  }
+
+  .modal_menu.active_menu {
+    position: absolute;
+    top: 4.53rem;
+    left: 50%;
+    /* transform: scale(1) translateX(-50%); */
+    transform: translateX(-50%);
+    width: max(260px, 90%);
+    height: max-content;
+    padding: 1.125rem 0.9rem;
+    visibility: visible;
+    opacity: 0.99;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 300ms linear;
+  }
 }
 
 @media screen and (min-width: 520px) {

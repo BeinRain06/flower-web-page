@@ -9,7 +9,7 @@ export default {
 <template>
   <div id="landing_page" class="landing_page p-0">
     <!-- hero section -->
-    <section class="hero_section w-full">
+    <section class="hero_section w-full max-[520px]:mt-[4.5rem]">
       <div
         class="hero_content relative pt-[0.225rem] px-0 md:pt-12 w-full h-full md:px-[2.25rem]"
       >
@@ -18,7 +18,7 @@ export default {
           class="hero_context w_ct_max_1 h-full mx-auto flex flex-col items-center justify-center"
         >
           <div
-            class="hero_value w-full flex flex-col justify-center text-center break-words pt-[0.225rem]"
+            class="hero_value w-full flex flex-col justify-center text-center break-words max-[520px]:pt-[0.225rem] pt-[0.9rem] md:pt-[0.225rem]"
           >
             <h1 class="core_value font-bold pb-[1.125rem]">
               Decorate your Home, your Events' Space With Natural Flowers Grown
@@ -44,7 +44,7 @@ export default {
     </section>
 
     <!-- about me section -->
-    <section class="about_section w-full relative mt-0 md:mt-[4.5rem]">
+    <section class="about_section w-full relative mt-[1.125rem] md:mt-[4.5rem]">
       <div
         class="about_content w_ct_max_2 flex flex-col md:flex-row-reverse justify-center h-auto md:h-[20.7rem] mx-auto py-[0.45rem]"
       >
@@ -242,33 +242,35 @@ export default {
       <div
         class="bar_deco_1 w-[60%] h-[4px] text-opacity-50 mx-auto bg-[var(--background-main)] rounded-xl"
       ></div>
-      <div class="services_content pt-[4.5rem] pb-[1.35rem] px-[1.35rem]">
+      <div
+        class="services_content pt-[4.5rem] pb-[1.35rem] max-[520px]:px-[0.9rem] px-[1.35rem]"
+      >
         <h3
           class="title_context w-full text-center font-semibold pt-[0.45rem] pb-[2.7rem]"
         >
           Services
         </h3>
         <div
-          class="services_deal w-[96%] md:w-[75%] pb-[2.025rem] flex flex-col gap-[2.025rem] mx-auto"
+          class="services_deal w-full md:w-[75%] pb-[2.025rem] flex flex-col gap-[2.025rem] mx-auto"
         >
           <article
-            class="service_item w-full h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex flex-row justify-between border border-solid border-[var(--background-aux)] rounded-sm"
+            class="service_item w-full max-[520px]:h-auto h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex max-[520px]:flex-col flex-row max-[520px]:items-center justify-between border border-solid border-[var(--background-aux)] rounded-sm"
           >
-            <figure class="service_image w-[38.6%]">
+            <figure class="service_image max-[520px]:w-full w-[38.6%]">
               <img
-                class="service_pic w-full h-full object-cover rounded-sm"
+                class="service_pic w-full max-[520px]:h-[9.9rem] h-full object-cover rounded-sm"
                 src="/src/assets/images/flower-3339266_1280.jpg"
               />
               <figcaption></figcaption>
             </figure>
-            <div class="service_context w-[59.4%]">
+            <div class="service_context max-[520px]:w-full w-[59.4%]">
               <div class="service_trade">
                 <h3
-                  class="title_context font-semibold pt-[0.45rem] pb-[1.575rem]"
+                  class="title_context font-semibold pt-[0.45rem] max-[520px]:pb-[0.675rem] pb-[1.575rem]"
                 >
                   Cheerful Happiness
                 </h3>
-                <p>
+                <p class="max-[520px]:small_p">
                   Get New Flowers on our store each season. Make thoughtfull
                   Gifts or align your space with the swing of the time.
                 </p>
@@ -276,23 +278,23 @@ export default {
             </div>
           </article>
           <article
-            class="service_item w-full h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex flex-row-reverse justify-between border border-solid border-[var(--background-aux)] rounded-sm"
+            class="service_item w-full max-[520px]:h-auto h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex max-[520px]:flex-col flex-row-reverse max-[520px]:items-center justify-between border border-solid border-[var(--background-aux)] rounded-sm"
           >
-            <figure class="service_image w-[38.6%]">
+            <figure class="service_image max-[520px]:w-full w-[38.6%]">
               <img
-                class="service_pic w-full h-full object-cover rounded-sm"
+                class="service_pic w-full max-[520px]:h-[9.9rem] h-full object-cover rounded-sm"
                 src="/src/assets/images/plum-blossoms-8579641_1280.jpg"
               />
               <figcaption></figcaption>
             </figure>
-            <div class="service_context w-[59.4%]">
+            <div class="service_context max-[520px]:w-full w-[59.4%]">
               <div class="service_trade">
                 <h3
-                  class="title_context font-semibold pt-[0.45rem] pb-[1.575rem]"
+                  class="title_context font-semibold pt-[0.45rem] max-[520px]:pb-[0.675rem] pb-[1.575rem]"
                 >
                   Decoration
                 </h3>
-                <p>
+                <p class="max-[520px]:small_p">
                   Organize desirably flowers for your space or events. Harmonize
                   your thoughts, get new meaningful ideas in mind
                 </p>
@@ -300,23 +302,23 @@ export default {
             </div>
           </article>
           <article
-            class="service_item w-full h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex flex-row justify-between border border-solid border-[var(--background-aux)] rounded-sm"
+            class="service_item w-full max-[520px]:h-auto h-[12.6rem] py-[1.35rem] px-[1.125rem] bg-[var(--background-main)] flex max-[520px]:flex-col flex-row max-[520px]:items-center justify-between border border-solid border-[var(--background-aux)] rounded-sm"
           >
-            <figure class="service_image w-[38.6%]">
+            <figure class="service_image max-[520px]:w-full w-[38.6%]">
               <img
-                class="service_pic w-full h-full object-cover rounded-sm"
+                class="service_pic w-full max-[520px]:h-[9.9rem] h-full object-cover rounded-sm"
                 src="/src/assets/images/zinnia-3518967_1280.jpg"
               />
               <figcaption></figcaption>
             </figure>
-            <div class="service_context w-[59.4%]">
+            <div class="service_context max-[520px]:w-full w-[59.4%]">
               <div class="service_trade">
                 <h3
-                  class="title_context font-semibold pt-[0.45rem] pb-[1.575rem]"
+                  class="title_context font-semibold pt-[0.45rem] max-[520px]:pb-[0.675rem] pb-[1.575rem]"
                 >
                   Gardening
                 </h3>
-                <p>
+                <p class="max-[520px]:small_p">
                   We can assist and advice you at growing your personal garden
                   at home. A sanctuary where spending times in, brings you joy,
                   peace, and productivity.
@@ -387,7 +389,9 @@ export default {
 
     <!-- special offer section -->
     <section class="offer_section w-full">
-      <div class="offer_content relative w-full h-[21.6rem] md:h-[23.4rem]">
+      <div
+        class="offer_content relative w-full max-[520px]:h-[23.625rem] h-[21.6rem] md:h-[23.4rem]"
+      >
         <div class="special_image"></div>
         <div
           class="special_deal absolute top-0 w-full h-full pt-[2.925rem] flex flex-col items-center"
@@ -399,12 +403,14 @@ export default {
           </h3>
           <div class="special_context w-8/12 mx-auto">
             <h4
-              class="special_text w-full text-[var(--background-main)] text-center font-semibold pb-[2.925rem]"
+              class="special_text w-full text-[var(--background-main)] text-center font-semibold max-[520px]:pb-[10%] pb-[2.925rem]"
             >
               Get 20% off on all orders above $150. Use code: FLOWER20 at
               checkout. Limited time offer!
             </h4>
-            <div class="special_btn flex flex-row justify-end">
+            <div
+              class="special_btn flex flex-row justify-end -mr-[1.575rem] md:-mr-0"
+            >
               <a href="#" class="btn_order">Place An Order</a>
             </div>
           </div>
@@ -414,16 +420,18 @@ export default {
 
     <!-- trust section -->
     <section class="trust_section w-full">
-      <div class="trust_content pt-[4.05rem] pb-[1.35rem] px-[1.35rem]">
+      <div
+        class="trust_content max-[520px]:pt-[2.025rem] pt-[4.05rem] pb-[1.35rem] px-[1.35rem]"
+      >
         <h3
-          class="title_context w-full text-center font-semibold pt-[0.45rem] pb-[3.15rem]"
+          class="title_context w-full text-center font-semibold pt-[0.45rem] max-[520px]:pb-[2.25rem] pb-[3.15rem]"
         >
           Why Us ?
         </h3>
         <div class="trust_deal w-full pb-[3.375rem]">
           <div
             id="benefit_item1"
-            class="md:pr-[1.125rem] w-full flex flex-row items-center justify-end gap-[1.35rem] md:border-r-4 md:border-solid md:border-[var(--background-main)] rounded-sm"
+            class="md:pr-[1.125rem] w-full flex max-[520px]:flex-col flex-row items-center justify-end gap-[1.35rem] md:border-r-4 md:border-solid md:border-[var(--background-main)] rounded-sm max-[520px]:pb-[2.025rem]"
           >
             <div class="icon_wrap">
               <svg
@@ -438,7 +446,9 @@ export default {
                 />
               </svg>
             </div>
-            <div class="benefit_context w-[75%] flex flex-col gap-[1.125rem]">
+            <div
+              class="benefit_context w-[75%] max-[520px]:items-center max-[520px]:gap-[0.675rem] flex flex-col gap-[1.125rem]"
+            >
               <h4 class="benefit_title">Priority</h4>
               <p class="benefit_text w-11/12">
                 We are not just delivering, we aims to tease your happiness
@@ -448,7 +458,7 @@ export default {
           </div>
           <div
             id="benefit_item2"
-            class="md:pl-[1.125rem] w-full flex flex-row justify-end md:justify-start gap-[1.35rem]"
+            class="md:pl-[1.125rem] w-full flex max-[520px]:flex-col flex-row justify-end max-[520px]:items-center md:justify-start gap-[1.35rem] max-[520px]:pb-[2.025rem]"
           >
             <div class="icon_wrap">
               <svg
@@ -463,7 +473,9 @@ export default {
                 />
               </svg>
             </div>
-            <div class="benefit_context w-[75%] flex flex-col gap-[1.125rem]">
+            <div
+              class="benefit_context w-[75%] max-[520px]:items-center max-[520px]:gap-[0.675rem] flex flex-col gap-[1.125rem]"
+            >
               <h4 class="benefit_title">Support</h4>
               <p class="benefit_text w-11/12">
                 Advice you on the process of growing or taking care of natural
@@ -473,7 +485,7 @@ export default {
           </div>
           <div
             id="benefit_item3"
-            class="md:pl-[1.125rem] w-full flex flex-row justify-end md:justify-start gap-[1.35rem]"
+            class="md:pl-[1.125rem] w-full flex max-[520px]:flex-col flex-row justify-end max-[520px]:items-center md:justify-start gap-[1.35rem]"
           >
             <div class="icon_wrap">
               <svg
@@ -492,7 +504,9 @@ export default {
                 />
               </svg>
             </div>
-            <div class="benefit_context w-[75%] flex flex-col gap-[1.125rem]">
+            <div
+              class="benefit_context w-[75%] max-[520px]:items-center max-[520px]:gap-[0.675rem] flex flex-col gap-[1.125rem]"
+            >
               <h4 class="benefit_title">Flexibility</h4>
               <p class="benefit_text w-11/12">
                 We desirably work with you to organize, arrange, and spark
@@ -509,7 +523,9 @@ export default {
 
     <!-- testimonials section -->
     <section class="testimonials_section w-full">
-      <div class="testimonials_content pt-[4.05rem] md:pt-[4.275rem]">
+      <div
+        class="testimonials_content max-[520px]:pt-[2.7rem] pt-[4.05rem] md:pt-[4.275rem]"
+      >
         <h3
           class="title_context w-full text-center font-semibold pt-[0.45rem] pb-[2.7rem]"
         >
@@ -519,9 +535,9 @@ export default {
           class="testimonials_deal w_ct_max_3 mx-auto flex flex-col items-center gap-[2.7rem] rounded"
         >
           <article
-            class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex flex-row justify-center items-center gap-[1.8rem]"
+            class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex max-[520px]:flex-col flex-row justify-center items-center gap-[1.8rem]"
           >
-            <div class="testimonial_image self-end">
+            <div class="testimonial_image max-[520px]:self-center self-end">
               <p class="font-bold text-[var(--title-color)]">1</p>
             </div>
             <div class="testimonial_context w-[72%]">
@@ -541,9 +557,9 @@ export default {
           </article>
 
           <article
-            class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex flex-row justify-center items-center gap-[1.8rem]"
+            class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex max-[520px]:flex-col flex-row justify-center items-center gap-[1.8rem]"
           >
-            <div class="testimonial_image self-end">
+            <div class="testimonial_image max-[520px]:self-center self-end">
               <p class="font-bold text-[var(--title-color)]">2</p>
             </div>
             <div class="testimonial_context w-[72%]">
@@ -564,9 +580,9 @@ export default {
           </article>
 
           <article
-            class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex flex-row justify-center items-center gap-[1.8rem]"
+            class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex max-[520px]:flex-col flex-row justify-center items-center gap-[1.8rem]"
           >
-            <div class="testimonial_image self-end">
+            <div class="testimonial_image max-[520px]:self-center self-end">
               <p class="font-bold text-[var(--title-color)]">3</p>
             </div>
             <div class="testimonial_context w-[72%]">
@@ -590,7 +606,7 @@ export default {
 
     <!-- reinforcement section -->
     <section
-      class="reinforcement_section w-full bg-[var(--background-aux)] text-opacity-80 relative mt-[7.425rem]"
+      class="reinforcement_section w-full bg-[var(--background-aux)] text-opacity-80 relative max-[520px]:mt-[6.3rem] mt-[7.425rem]"
     >
       <div
         class="about_content w_ct_max_2 flex flex-col md:flex-row justify-between gap-[1.575rem] md:gap-[2.475rem] mx-auto pt-[4.05rem] pb-[2.925rem]"
@@ -667,7 +683,7 @@ export default {
   scroll-margin-top: 12px;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 140px) {
   /* utilities */
   .w_ct_max_1 {
     width: 90%;
@@ -678,18 +694,14 @@ export default {
   }
 
   .w_ct_max_3 {
-    width: max(71.6%, 32.625rem);
+    width: 90%;
   }
-
-  /*  h1 {
-  line-height: 1.42;
-} */
 
   /* hero section */
   .hero_section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 86vh;
   }
 
   .hero_content {
@@ -701,8 +713,7 @@ export default {
     height: 100%;
     background: url("../assets/images/Couleur_Pixabay.jpg") left center
       no-repeat;
-    background-size: 100%;
-    backdrop-filter: grayscale(18%);
+    background-size: cover;
     backdrop-filter: hue-rotate(240deg);
     border: none;
     outline: none;
@@ -733,24 +744,24 @@ export default {
 
   .about_pic {
     width: 100%;
-    height: 34.2rem;
+    height: 24.75rem;
     object-fit: cover;
   }
 
   /* recommended flowers section */
   .recommended_deal {
     display: grid;
-    grid-auto-columns: 80%;
+    grid-auto-columns: 90%;
     grid-template-rows: max-content;
-    gap: 1.35rem;
+    gap: 1.575rem;
   }
 
   /* shelves section */
   .shelves_deal {
     display: grid;
-    grid-auto-columns: 80%;
+    grid-auto-columns: 90%;
     grid-template-columns: repeat(auto-fit, minmax(11.72rem, 1fr));
-    grid-auto-rows: max-content;
+    grid-auto-rows: 9.45rem;
     gap: 1.35rem;
   }
 
@@ -781,9 +792,9 @@ export default {
     width: 100%;
     height: 100%;
     border: 2px solid transparent;
-    background: url("../assets/images/chaos-answer_pixabay.jpg") left center
+    background: url("../assets/images/chaos-answer_pixabay.jpg") left 52% center
       no-repeat;
-    background-size: 100%;
+    background-size: cover;
     backdrop-filter: invert(70%);
     border: none;
     outline: none;
@@ -827,8 +838,8 @@ export default {
   /* testimonials section */
   .testimonial_image {
     flex-shrink: 0;
-    width: 4.05rem;
-    height: 4.05rem;
+    width: 3.7125rem;
+    height: 3.7125rem;
     display: grid;
     place-items: center;
     background-color: var(--background-aux);
@@ -862,6 +873,73 @@ export default {
     border: none;
     outline: none;
     /* z-index: -1; */
+  }
+}
+
+@media screen and (min-width: 520px) {
+  /* utilities */
+  .w_ct_max_1 {
+    width: 96%;
+  }
+
+  .w_ct_max_2 {
+    width: 96%;
+  }
+
+  .w_ct_max_3 {
+    width: max(71.6%, 32.625rem);
+  }
+
+  /* hero section */
+  .hero_section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .hero_image {
+    background-size: 102%;
+  }
+
+  /* about section */
+  .about_pic {
+    width: 100%;
+    height: 34.2rem;
+    object-fit: cover;
+  }
+
+  /* recommended flowers section */
+  .recommended_deal {
+    display: grid;
+    grid-auto-columns: 80%;
+    gap: 1.35rem;
+  }
+
+  /* shelves section */
+  .shelves_deal {
+    display: grid;
+    grid-auto-columns: 80%;
+    grid-auto-rows: max-content;
+    gap: 1.35rem;
+  }
+
+  /* special offer section */
+  .special_image {
+    background: url("../assets/images/chaos-answer_pixabay.jpg") left center
+      no-repeat;
+    background-size: 100%;
+  }
+
+  /* trust section */
+  .trust_deal {
+    gap: 2.475rem;
+  }
+
+  /* testimonials section */
+  .testimonial_image {
+    flex-shrink: 0;
+    width: 4.05rem;
+    height: 4.05rem;
   }
 }
 
@@ -905,7 +983,8 @@ export default {
 
   .about_pic {
     width: 100%;
-    aspect-ratio: 16/10;
+    height: 100%;
+    /* aspect-ratio: 16/10; */
     object-fit: cover;
   }
 
@@ -914,7 +993,6 @@ export default {
     display: grid;
     grid-auto-columns: unset;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content;
     gap: 1.35rem;
   }
 
@@ -925,14 +1003,6 @@ export default {
     grid-auto-rows: unset;
     grid-template-columns: repeat(auto-fit, minmax(15.75rem, 1fr));
     grid-template-rows: max-content;
-  }
-
-  .shelves_item {
-    width: 100%;
-    height: 100%;
-    padding: 1.125rem;
-    border-radius: 0.225rem;
-    text-align: center;
   }
 
   .shelves_image {
