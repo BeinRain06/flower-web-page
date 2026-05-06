@@ -21,25 +21,20 @@
 
   --delta-scale-size: 0.225rem; /* 1.125rem/5 = 1 Ev_N*/
 
-  --primary-color: #704913;
-
-  --paragraph-color-1: #a09484;
-  --paragraph-color-2: #606060;
-  --paragraph-footer: #272525;
-  --accent-color-1: #fff;
-  --accent-color-2: #3f2146;
-
-  --background-main-content-1: #dcd2c8;
-  --background-main-content-2: #cac0b3;
-  --background-footer: #877664;
-
-  /* color-scheme-1 (05 colors) */
+  /* color-scheme-1 (07 colors) */
 
   --leading-color: hsl(35, 71%, 26%); /* ex: --primary-color */
   --background-main: hsl(35, 18%, 90%); /* ex:   --background-main-content-1 */
   --background-aux: hsl(35, 18%, 75%); /* ex: --background-main-content-2 */
-  --title-color: hsl(289, 36%, 20%); /* ex: --accent-color-2 */
+  --title-color: hsl(35, 18%, 68%); /* ex: --accent-color-2 */
   --paragraph-color: hsl(0, 0%, 38%); /* ex :--paragraph-color-2 */
+  --accent-color-1: hsl(35, 69%, 45%); /* ex: --primary-color */
+}
+
+@media screen and (min-width: 140px) {
+  :root {
+    --size-hero-title: calc(1.65rem + 0.12vw);
+  }
 }
 
 @media screen and (min-width: 520px) {
@@ -60,7 +55,7 @@
 @media screen and (min-width: 860px) {
   :root {
     --size-sm: calc(12px + 0.15vw);
-    --size-regular: clamp(0.945rem, 1.125rem, 1.17rem); /* 18px; */
+    --size-regular: clamp(0.945rem, 1.125rem, 1.15rem); /* 18px; */
     --size-cater: calc(14px + 0.1vw);
 
     --size-h3: calc(1.575rem + 0.1vw);
@@ -157,13 +152,14 @@ p.small_p {
 }
 
 li.navlink {
-  font-size: var(--size-regular);
+  font-size: var(--size-cater);
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  font-size: var(--size-sm);
+  /* font-size: var(--size-sm); */
+  font-size: var(--size-regular);
   padding: 0.25em 1em;
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
@@ -214,35 +210,39 @@ a.btn_order {
 
 a.btn_order:hover {
   color: var(--background-main);
-  background-color: var(--title-color);
+  background-color: var(--accent-color-1);
   /*   font-size: calc(12px + 0.28vw);
  */
   border: 1px solid var(--background-aux);
   border-radius: 24px;
-  transition: border-bottom 0.3s ease 0.1s, border-left 0.3s ease 0.1s,
-    border-top 0.3s ease 0.1s, border-right 0.3s ease 0.1s,
+  transition:
+    border-bottom 0.3s ease 0.1s,
+    border-left 0.3s ease 0.1s,
+    border-top 0.3s ease 0.1s,
+    border-right 0.3s ease 0.1s,
     border-radius 0.35s ease-in-out 0.2s;
 }
 
 a.btn_in_shelves {
   cursor: pointer;
   width: max-content;
-  color: var(--title-color);
-  background-color: var(--background-aux);
-  border: 1px solid transparent;
-  border-radius: 5px;
+  color: var(--accent-color-1);
+  /*  background-color: var(--background-aux); */
+  box-shadow: 0px 0px 5px var(--background-aux);
+  border-radius: 12px;
   opacity: 0.9;
 }
 
 a.btn_in_shelves:hover {
-  color: var(--title-color);
-  background-color: var(--background-main);
+  color: var(--accent-color-1);
+  box-shadow: 0px 0px 8px var(--accent-color-1);
   /* font-size: calc(12px + 0.28vw); */
-  border: 1px solid var(--leading-color);
-  opacity: 1;
   border-radius: 24px;
-  transition: border-bottom 0.3s ease 0.1s, border-left 0.3s ease 0.1s,
-    border-top 0.3s ease 0.1s, border-right 0.3s ease 0.1s,
+  transition:
+    border-bottom 0.3s ease 0.1s,
+    border-left 0.3s ease 0.1s,
+    border-top 0.3s ease 0.1s,
+    border-right 0.3s ease 0.1s,
     border-radius 0.35s ease-in-out 0.2s;
 }
 
@@ -261,8 +261,11 @@ a.btn_visit_shop:hover {
   opacity: 1;
   border: 1px solid var(--title-color);
   border-radius: 24px;
-  transition: border-bottom 0.3s ease 0.1s, border-left 0.3s ease 0.1s,
-    border-top 0.3s ease 0.1s, border-right 0.3s ease 0.1s,
+  transition:
+    border-bottom 0.3s ease 0.1s,
+    border-left 0.3s ease 0.1s,
+    border-top 0.3s ease 0.1s,
+    border-right 0.3s ease 0.1s,
     border-radius 0.35s ease-in-out 0.2s;
 }
 

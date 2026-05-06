@@ -5,11 +5,11 @@ export default {
   components: { LandingPageOne },
   setup() {
     const navlinks = ref([
-      { id: "navlink-1", label: "HOME", ref: null },
-      { id: "navlink-2", label: "ABOUT", ref: null },
-      { id: "navlink-3", label: "STORE", ref: null },
-      { id: "navlink-4", label: "NEW SEASON", ref: null },
-      { id: "navlink-5", label: "CONTACT", ref: null },
+      { id: "navlink-1", label: "Home", ref: null },
+      { id: "navlink-2", label: "About", ref: null },
+      { id: "navlink-3", label: "Store", ref: null },
+      { id: "navlink-4", label: "New Season", ref: null },
+      { id: "navlink-5", label: "Contact", ref: null },
     ]);
 
     const currentActiveLink = ref(null);
@@ -65,7 +65,9 @@ export default {
 
 <template>
   <header>
-    <nav class="w-full flex flex-row justify-between py-5 pl-5 pr-10 md:px-10">
+    <nav
+      class="w-full flex flex-row justify-between py-3 pl-5 pr-7 md:py-5 md:px-10"
+    >
       <div class="logo_brand">TERRY_FLOWERS</div>
       <ul
         class="navlink_desktop flex flex-row space-x-4 md:space-x-6 hidden min-[520px]:flex"
@@ -87,7 +89,7 @@ export default {
           class="menu_content relative w-8 h-8 flex justify-center items-center rounded border border-solid border-[var(--color-text)]"
         >
           <div
-            class="middle_bar relative h-[1px] w-[72%] bg-[var(--paragraph-color)] z-0"
+            class="middle_bar relative h-[1px] w-[60%] bg-[var(--paragraph-color)] z-0"
             ref="middleBarRef"
           ></div>
           <div
@@ -103,9 +105,10 @@ export default {
           </div>
         </div>
         <div class="modal_menu" ref="modalMenuRef">
-          <div class="modal_close w-full">
+          <div class="modal_close w-full z-0">
             <div
-              class="icon_menu_close w-full h-6 cursor-pointer flex flex-row justify-end"
+              class="icon_menu_close w-full h-6 cursor-pointer flex flex-row justify-end z-10"
+              @click="handleMenu"
             >
               x
             </div>
@@ -350,7 +353,7 @@ nav {
     left: 0;
     /*  transform: scale(0.45) translateX(-50%); */
     transform: translateX(-100%);
-    width: max(260px, 90%);
+    width: max(275px, 92%);
     height: max-content;
     padding: 1.125rem 0.9rem;
     color: var(--paragraph-color);
@@ -389,11 +392,12 @@ nav {
     font-family: "Noto Serif", serif;
     font-size: var(--size-cater);
     font-weight: 600;
-    color: var(--paragraph-color);
+    color: var(--leading-color);
   }
 
   .navlink {
     color: var(--paragraph-color);
+    opacity: 0.86;
     font-weight: inherit;
     text-decoration: none;
     transition: all 450ms ease-in-out;

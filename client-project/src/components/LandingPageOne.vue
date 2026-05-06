@@ -9,32 +9,32 @@ export default {
 <template>
   <div id="landing_page" class="landing_page p-0">
     <!-- hero section -->
-    <section class="hero_section w-full max-[520px]:mt-[4.5rem]">
+    <section class="hero_section w-full max-[520px]:mt-[3.5rem]">
       <div
-        class="hero_content relative pt-[0.225rem] px-0 md:pt-12 w-full h-full md:px-[2.25rem]"
+        class="hero_content relative pt-[0.225rem] px-0 md:pt-[1.35rem] w-full h-full md:px-[2.25rem]"
       >
         <div class="hero_image absolute top-0 md:top-10 left-0"></div>
         <div
           class="hero_context w_ct_max_1 h-full mx-auto flex flex-col items-center justify-center"
         >
           <div
-            class="hero_value w-full flex flex-col justify-center text-center break-words max-[520px]:pt-[0.225rem] pt-[0.9rem] md:pt-[0.225rem]"
+            class="hero_value w-full flex flex-col justify-center text-center break-words max-[520px]:pt-[0.225rem] pt-[0.9rem] md:pt-[0.3375rem]"
           >
-            <h1 class="core_value font-bold pb-[1.125rem]">
+            <h1 class="core_value font-bold pb-[1.8rem] md:pb-[1.35rem]">
               Decorate your Home, your Events' Space With Natural Flowers Grown
               With Love And Care
             </h1>
             <div
               class="sub_core_value text-[var(--paragraph-color)] pb-[2.25rem] mx-auto"
             >
-              <p class="px-[0.225rem]">
+              <p class="px-[0.25rem]">
                 Reconquer your happiness and energize your soul standing over
                 beautiful scenery's flowers
               </p>
             </div>
           </div>
           <div
-            class="hero_btn md:pt-[0.8%] pt-[2%] pb-[1.35rem] md:pb-[1.125rem] w-full flex flex-row justify-center gap-[1.8rem]"
+            class="hero_btn md:pt-[4%] pt-[6%] pb-[1.35rem] md:pb-[1.125rem] w-full flex flex-row justify-center gap-[1.8rem]"
           >
             <a href="#" class="btn_order">Place An Order</a>
             <a class="btn_in_shelves">In Shelves</a>
@@ -424,7 +424,7 @@ export default {
         class="trust_content max-[520px]:pt-[2.025rem] pt-[4.05rem] pb-[1.35rem] px-[1.35rem]"
       >
         <h3
-          class="title_context w-full text-center font-semibold pt-[0.45rem] max-[520px]:pb-[2.25rem] pb-[3.15rem]"
+          class="title_context w-full text-center text-[var(--accent-color-1)] font-semibold pt-[0.45rem] max-[520px]:pb-[2.25rem] pb-[3.15rem]"
         >
           Why Us ?
         </h3>
@@ -450,7 +450,7 @@ export default {
               class="benefit_context w-[75%] max-[520px]:items-center max-[520px]:gap-[0.675rem] flex flex-col gap-[1.125rem]"
             >
               <h4 class="benefit_title">Priority</h4>
-              <p class="benefit_text w-11/12">
+              <p class="benefit_text w-11/12 opacity-65">
                 We are not just delivering, we aims to tease your happiness
                 after understanding the essence of your demands.
               </p>
@@ -477,7 +477,7 @@ export default {
               class="benefit_context w-[75%] max-[520px]:items-center max-[520px]:gap-[0.675rem] flex flex-col gap-[1.125rem]"
             >
               <h4 class="benefit_title">Support</h4>
-              <p class="benefit_text w-11/12">
+              <p class="benefit_text w-11/12 opacity-65">
                 Advice you on the process of growing or taking care of natural
                 flowers for your garden or home.
               </p>
@@ -508,7 +508,7 @@ export default {
               class="benefit_context w-[75%] max-[520px]:items-center max-[520px]:gap-[0.675rem] flex flex-col gap-[1.125rem]"
             >
               <h4 class="benefit_title">Flexibility</h4>
-              <p class="benefit_text w-11/12">
+              <p class="benefit_text w-11/12 opacity-65">
                 We desirably work with you to organize, arrange, and spark
                 beautiful sceneries of flowers.
               </p>
@@ -538,7 +538,7 @@ export default {
             class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex max-[520px]:flex-col flex-row justify-center items-center gap-[1.8rem]"
           >
             <div class="testimonial_image max-[520px]:self-center self-end">
-              <p class="font-bold text-[var(--title-color)]">1</p>
+              <p class="font-bold text-[var(--background-main)]">1</p>
             </div>
             <div class="testimonial_context w-[72%]">
               <h4
@@ -560,7 +560,7 @@ export default {
             class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex max-[520px]:flex-col flex-row justify-center items-center gap-[1.8rem]"
           >
             <div class="testimonial_image max-[520px]:self-center self-end">
-              <p class="font-bold text-[var(--title-color)]">2</p>
+              <p class="font-bold text-[var(--background-main)]">2</p>
             </div>
             <div class="testimonial_context w-[72%]">
               <h4
@@ -583,7 +583,7 @@ export default {
             class="testimonial_item w-full bg-[var(--background-main)] pt-[1.125rem] pb-[2.025rem] px-[1.125rem] flex max-[520px]:flex-col flex-row justify-center items-center gap-[1.8rem]"
           >
             <div class="testimonial_image max-[520px]:self-center self-end">
-              <p class="font-bold text-[var(--title-color)]">3</p>
+              <p class="font-bold text-[var(--background-main)]">3</p>
             </div>
             <div class="testimonial_context w-[72%]">
               <h4
@@ -701,29 +701,30 @@ export default {
   .hero_section {
     position: relative;
     width: 100%;
-    height: 86vh;
+    height: 65vh;
   }
 
   .hero_content {
-    backdrop-filter: blur(48px);
+    backdrop-filter: blur(5px);
   }
 
   .hero_image {
     width: 100%;
     height: 100%;
-    background: url("../assets/images/Couleur_Pixabay.jpg") left center
+    background: url("../assets/images/Couleur_Pixabay-2.jpg") left top -4%
       no-repeat;
     background-size: cover;
-    backdrop-filter: hue-rotate(240deg);
+    /* backdrop-filter: hue-rotate(240deg); */
     border: none;
     outline: none;
     z-index: -1;
   }
 
   .sub_core_value p {
-    filter: drop-shadow(#ee969d 0.25rem 0.25rem 1rem);
-    background-color: var(--background-aux);
-    backdrop-filter: invert(30%);
+    filter: drop-shadow(#ee969d 0.15rem 0.15rem 0.35rem);
+    color: var(--background-main);
+    line-height: 1.6;
+    backdrop-filter: invert(14%);
   }
 
   .hero_image::before {
@@ -960,7 +961,7 @@ export default {
   /* hero section */
   .hero_section {
     width: 100%;
-    height: 88vh;
+    height: 96vh;
     /*  background: linear-gradient(
       97.39deg,
       hsl(35, 18%, 90%) 25.12%,
@@ -971,6 +972,8 @@ export default {
   .hero_image {
     width: 100%;
     height: 90%;
+    background: url("../assets/images/Couleur_Pixabay-2.jpg") left top 50%
+      no-repeat;
     border-top: 2px solid var(--background-aux);
     border: 2px solid transparent;
   }
